@@ -1,0 +1,1 @@
+This site is not functional yet for I need to start putting the bits and bobs inside. As well as set up the style.css & functions.inc.php proper. ontop of getting the DataBase inputted and seeing if I need a 2nd DataBase for the posts themselves. There is so much to do but I'm very excited for this website!
