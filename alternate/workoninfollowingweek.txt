@@ -1,7 +1,0 @@
-1. start coding up the css
-2. get the posts & recipes pages up and running
-3. get the spicyrice script and a script for the posts page to make it look nice
-4. get the logo in the right spot ( might have it off to the right )
-5. create an about page and a contact page
-*. maybe add images to the users posts, might be going to far
-6. add more functions to post, delete, and rate recipes

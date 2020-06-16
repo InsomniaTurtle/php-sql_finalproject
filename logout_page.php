@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once('includes/mysqli_connect.php');
-require_once('includes/functions.inc.php');
+include_once 'inc/mysqli_connect.php';
+include_once 'inc/functions.inc.php';
 
 log_page($db, "Logout Page");
 
@@ -20,11 +20,11 @@ if (isset($_SESSION['loggedin'])) {
 
 <?php
 $pageTitle = "Logged Out - Doodledip";
-require_once("includes/header.php");
+include_once 'inc/header.inc.php';
 ?>
 
 
-<?php require_once('includes/nav.php'); ?>
+<?php include_once 'inc/nav.inc.php'; ?>
 <h1>Doodledip</h1>
 <div class="success">Congratz, you logged out of doodledip. Come back anytime!</div>
-<?php require_once('includes/footer.php') ?>
+<?php require 'inc/footer.inc.php' ?>

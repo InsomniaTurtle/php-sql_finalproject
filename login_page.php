@@ -71,48 +71,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $db->close();
 
 if (!$success) { ?>
+    <?php
+    include_once 'inc/functions.inc.php';
+    include_once 'inc/header.inc.php';
+    include_once 'inc/nav.inc.php';
+    ?>
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" autocomplete="off">
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <link rel="stylesheet" href="style.css">
+        <label class="doodlelabel" for="username">Username:</label>
+        <input class="dipinput" type="text" id="username" name="username" size="20" maxlength="20" value="<?php if (isset($_POST["username"])) {
+                                                                                                                echo $_POST["username"];
+                                                                                                            } ?>">
+        <br>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Doodledip login - page</title>
-    </head>
-
-    <body>
-        <div class="header area">
-            <div class="title">
-                <h1 class="txtype">Doodledip: Create, Share & Enjoy</h1>
-                <h2 class="txtype">Login Page</h2>
-            </div>
-            <div class="nav">
-                <!-- links for later -->
-                <h3>home | recipes | post | Login/Logout</h3>
-            </div>
-
-        </div>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" autocomplete="off">
-
-            <label class="doodlelabel" for="username">Username:</label>
-            <input class="dipinput" type="text" id="username" name="username" size="20" maxlength="20" value="<?php if (isset($_POST["username"])) {
-                                                                                                                    echo $_POST["username"];
+        <label class="doodlelabel" for="password">Password:</label>
+        <input class="dipinput" type="password" id="password" name="password" size="20" maxlength="20" value="<?php if (isset($_POST["password"])) {
+                                                                                                                    echo $_POST["password"];
                                                                                                                 } ?>">
-            <br>
+        <br>
 
-            <label class="doodlelabel" for="password">Password:</label>
-            <input class="dipinput" type="password" id="password" name="password" size="20" maxlength="20" value="<?php if (isset($_POST["password"])) {
-                                                                                                                        echo $_POST["password"];
-                                                                                                                    } ?>">
-            <br>
+        <input class="button1" type="submit" value="Login">
+    </form>
+<?php } ?>
 
-            <input class="button1" type="submit" value="Login">
-        </form>
-    <?php } ?>
-
-    <?php require_once('includes/footer.php') ?>
-    </body>
-
-    </html>
+<?php require 'inc/footer.inc.php' ?>

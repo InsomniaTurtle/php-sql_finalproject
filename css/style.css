@@ -1,0 +1,43 @@
+/* doodledip style :) */
+
+/* colors to use:
+#000000 text-content
+#C7D59F content boxes
+#FFFFFF text
+#4B5842 nav area
+#8FB339 title area color
+#B7CE63 main body color
+*/
+
+/* Text types to use:
+Roboto normal txt
+SpiceyRice title
+*/
+
+/* 
+add a border to the main logo
+*/
+
+nav {
+    background-color: #143306;
+    color: #D2AC47;
+}
+
+footer {
+    background-color: #143306;
+    color: #D2AC47;
+}
+
+.title {
+    background-color: #8FB339;
+}
+
+body {
+    background-color: #B7CE63;
+    margin: 20px;
+    /* border-color: #302621;
+    border-style: solid;
+    border-width: 0.5em; */
+}
+
+/* figure out why css changes arn't changing the page while live, either i'm doing the syntax wrong or i need to relaunch */

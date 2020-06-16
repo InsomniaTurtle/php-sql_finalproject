@@ -1,1 +1,0 @@
-Database with three tables has been created, site is slowly coming together and it should be fully complete soon. There is still much to do and more functions to create and the css still needs to be done. And I have to find the script for spicyrice font and another script to have each post in a card/ floaty box.

@@ -16,6 +16,6 @@
 
         ?> <span class="doodledip">Doodledip</span>
         <a href="mainpage.php" title="Doodledip Homepage">Home Page</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="register_page.php" title="Register">Register</a>&nbsp;&nbsp;<?php echo $post ?><?php echo $logtext ?>
-        <img class="logo" src="img/doodledip_logo.png" alt="doodledip Logo" />
+        <img class="logo" src="img/doodledip_logo.png" alt="doodledip Logo" height="50" />
     </nav>
 </header>
