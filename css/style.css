@@ -40,4 +40,15 @@ body {
     border-width: 0.5em; */
 }
 
+.doodlelabel {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.dipinput {
+    font-size: 1.5em;
+}
+
 /* figure out why css changes arn't changing the page while live, either i'm doing the syntax wrong or i need to relaunch */

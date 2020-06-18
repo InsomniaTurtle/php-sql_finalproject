@@ -21,7 +21,6 @@ include_once 'inc/nav.inc.php';
     <form action="" method="post">
         <label class="doodlelabel" for="rectype">Type of recipe; </label>
         <select name="rectype" id="rectype">
-            <!-- input php guts -->
         </select>
         <br>
         <!-- fix text area to fit 5000 characters (look up appropraite text area size) -->
