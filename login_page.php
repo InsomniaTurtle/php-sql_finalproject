@@ -3,8 +3,8 @@
 session_start();
 
 try {
-    require_once('includes/mysqli_connect.php');
-    require_once('includes/functions.inc.php');
+    include_once 'inc/mysqli_connect.php';
+    include_once 'inc/functions.inc.php';
     log_page($db, "Login Page");
 } catch (Exception $e) {
     $error = $e->getMessage();
@@ -15,7 +15,7 @@ function login($db)
     $email = $db->real_escape_string($_POST['email']);
     $password = hash('sha512', $_POST['password']);
 
-    $sql = "SELECT * FROM users WHERE email='" . $_POST["email"] . "'" . " AND password=" . "'" . $password . "' LIMIT 1";
+    $sql = "SELECT * FROM user_account WHERE email='" . $_POST["email"] . "'" . " AND password=" . "'" . $password . "' LIMIT 1";
 
     $result = $db->query($sql);
 
@@ -36,10 +36,10 @@ function login($db)
 
 <?php
 $pageTitle = "Login Page - Doodledip";
-require_once("includes/header.php");
+include_once "inc/header.inc.php";
 ?>
 
-<?php require_once("includes/nav.php");
+<?php include_once "inc/nav.inc.php";
 
 $success = false;
 
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($error) {
-        echo "All these fields are required!";
+        echo "You need to fill out all the things!";
     } else {
         $status = login($db);
 
@@ -71,11 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $db->close();
 
 if (!$success) { ?>
-    <?php
-    include_once 'inc/functions.inc.php';
-    include_once 'inc/header.inc.php';
-    include_once 'inc/nav.inc.php';
-    ?>
+
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" autocomplete="off">
 
         <label class="doodlelabel" for="username">Username:</label>

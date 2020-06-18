@@ -20,7 +20,7 @@ $success = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $required = array('username', 'fullname', 'email', 'password');
+    $required = array('username', 'fullname', 'email', 'user_password');
 
     $error = false;
     foreach ($required as $field) {
@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $db->real_escape_string($_POST['username']);
         $full_name = $db->real_escape_string($_POST['fullname']);
         $email = $db->real_escape_string($_POST['email']);
-        $password = hash('sha512', $_POST['password']);
-        $sql = "INSERT INTO users (username,full_name,email,password,) VALUES ('$username' ,'$full_name','$email','$password')";
+        $user_password = hash('sha512', $_POST['user_password']);
+        $sql = "INSERT INTO users (username,full_name,email,user_password,) VALUES ('$username' ,'$full_name','$email','$user_password')";
         // echo $sql;
         $result = $db->query($sql);
 
