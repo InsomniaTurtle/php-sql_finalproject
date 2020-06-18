@@ -15,7 +15,7 @@
         }
 
         ?> <span class="doodledip">Doodledip</span>
-        <a href="mainpage.php" title="Doodledip Homepage">Home Page</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="register_page.php" title="Register">Register</a>&nbsp;|&nbsp;<a href="posts_page.php" title="Doodledip Posts">Posts</a>&nbsp;&nbsp;|<a href="recipe_page.php" title="Doodledip Recipepage">Recipe Page</a>&nbsp;&nbsp;|<a href="contact_page.php" title="Doodledip Contactpage">Contact Page</a>&nbsp;&nbsp;<?php echo $post ?><?php echo $logtext ?>
+        <a href="mainpage.php" title="Doodledip Homepage">Home Page</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="register_page.php" title="Register">Register</a>&nbsp;|&nbsp;<a href="posts_page.php" title="Doodledip Posts">Posts</a>&nbsp;&nbsp;|<a href="recipes_page.php" title="Doodledip Recipespage">Recipes Page</a>&nbsp;&nbsp;|<a href="contact_page.php" title="Doodledip Contactpage">Contact Page</a>&nbsp;&nbsp;<?php echo $post ?><?php echo $logtext ?>
         <img class="logo" src="img/doodledip_logo.png" alt="doodledip Logo" height="50" />
     </nav>
 </header>
