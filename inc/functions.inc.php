@@ -11,11 +11,21 @@ function log_page($db, $page_name)
     $result = $db->query($sql);
 }
 ?>
-<!-- recipe typing area -->
+
 <?php
-if (isset($_GET['bake'])) {
-    // if user chooses bake puts a whisk image next to post @ username
-} elseif (isset($_GET['cook'])) {
-    // if the user selected the other option then put a knife image instead
-};
+function insert_post($db)
+{
+    $user_id = $db->real_escape_string($_SESSION['id']);
+    $textbox = $db->real_escape_string($_POST['textbox']);
+    $recipetype = $db->real_escape_string($_POST['recipetype']);
+    $sql = "INSERT INTO posts (user_id,textbox,recipetype) VALUES ('$user_id','$textbox','$recipetype')";
+
+    $result = $db->query($sql);
+
+    if (!$db->error) {
+        header("location: mainpage.php");
+    } else {
+        return false;
+    }
+}
 ?>

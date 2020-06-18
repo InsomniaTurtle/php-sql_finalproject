@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Doodledip</title>
+    <script src="https://use.fontawesome.com/2e41117f1c.js"></script>
+    <title><?php echo $pageTitle; ?></title>
 </head>
 
 <body>
