@@ -2,10 +2,15 @@
 
 session_start();
 
-include_once 'inc/mysqli_connect.php';
-include_once 'inc/functions.inc.php';
+try {
+    include_once 'inc/functions.inc.php';
+    include_once 'inc/mysqli_connect.php';
 
-log_page($db, "Logout Page");
+    // log page usage
+    log_page($db, "Logout");
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 
 
 if (isset($_SESSION['loggedin'])) {

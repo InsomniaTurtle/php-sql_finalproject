@@ -1,5 +1,17 @@
 <?php
-include_once 'inc/functions.inc.php';
+session_start();
+try {
+    include_once 'inc/functions.inc.php';
+    include_once 'inc/mysqli_connect.php';
+
+    // log page usage
+    log_page($db, "Posts");
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
+?>
+
+<?php
 include_once 'inc/header.inc.php';
 include_once 'inc/nav.inc.php';
 ?>
